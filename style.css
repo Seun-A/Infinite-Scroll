@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Bebas Neue', sans-serif;
+    background: whitesmoke;
+}
+
+h1 { 
+    color: #b67223;
+    text-align: center;
+    margin: 25px 0 15px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+/* Loader */
+.loader {
+    position: fixed; /* Stays put even if the user scrolls */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+.loader img {
+    position: fixed;
+    top: 50%; 
+    left: 50%;/* These two set the top left edge of the img to the center of the page */
+    transform: translate(-50%, -50%); /* This puts it to the center of the img */
+}
+
+/* Image Container */
+.image-container {
+    margin: 10px 30%;
+}
+.image-container img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width:700px) {
+    h1 {
+        font-size: 30px;
+    }
+    .image-container {
+        margin: 10px;
+    }
+}

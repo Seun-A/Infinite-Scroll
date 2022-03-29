@@ -4,29 +4,27 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Infinity Scroll</title>
+     <title>Infinite Scroll</title>
 
      <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=mp3quack.plus">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
      <link rel="stylesheet" href="style.css">
  </head>
  <body>
+
     <!-- Title -->
-    <h1>Unsplash API - Infinite Scroll</h1>
+    <h1>Infinite Scroll <br><small>Unsplash Architecture</small></h1>
 
     <!-- Loader -->
-    <div class="loader" id="loader">
-        <img src="loader.svg" alt="loader.svg not found">
-    </div> 
+    <!-- <div class="loader" id="loader">
+        <img src="loader.svg" alt="loader">
+    </div>  -->
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
 
     <!-- Image Container -->
     <div class="image-container" id="image-container">
-        <img src="https://images.unsplash.com/photo-1634822929277-0c51ca0e8846?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-        <img src="https://images.unsplash.com/photo-1634658056497-a9da003f2b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=744&q=80`" alt="">
-        <img src="https://images.unsplash.com/photo-1634822930369-9f5d59297b55?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80" alt="">
     </div>
-
-    
 
     <script src="script.js"></script>
  </body>

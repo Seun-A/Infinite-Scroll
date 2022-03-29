@@ -3,37 +3,53 @@
 html {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
-    min-height: 100vh;
+    background-color: whitesmoke;
     font-family: 'Bebas Neue', sans-serif;
-    background: whitesmoke;
+    /* min-height: 100vh; */
 }
-
-h1 { 
-    color: #b67223;
+h1 {
     text-align: center;
-    margin: 25px 0 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
     font-size: 40px;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
 }
 
 /* Loader */
-.loader {
-    position: fixed; /* Stays put even if the user scrolls */
+.loader-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Make it extend over the entire page */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.8);
 }
-.loader img {
+
+
+.loader {
     position: fixed;
-    top: 50%; 
-    left: 50%;/* These two set the top left edge of the img to the center of the page */
-    transform: translate(-50%, -50%); /* This puts it to the center of the img */
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid grey; /* Blue */
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1.5s linear infinite;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 /* Image Container */
 .image-container {
@@ -41,15 +57,31 @@ h1 {
 }
 .image-container img {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 15px;
+    border-radius: 10px;
+    transition: 0.4s transform ease-in-out;
+    box-shadow: 0px 10px 30px -10px rgba(0,0,0,.3);
+}
+.image-container img:hover {
+    transform: scale(1.05);
 }
 
-
-@media screen and (max-width:700px) {
+/* Media Query for Smartphone */
+@media screen and (max-width: 780px) {
     h1 {
-        font-size: 30px;
+        font-size: 35px;
     }
     .image-container {
-        margin: 10px;
+        margin: 0 20px;
+        columns: 2;
+    }    
+    .image-container img:hover {
+        transform: scale(1.015);
     }
+    
+}
+@media screen and (max-width: 500px) {
+    .image-container {
+        columns: 1;
+    }    
 }
